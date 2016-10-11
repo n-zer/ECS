@@ -118,11 +118,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Component.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Obj.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Component.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Handle.h" />
     <ClInclude Include="Identifiable.h" />
     <ClInclude Include="Obj.h" />
   </ItemGroup>

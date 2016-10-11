@@ -1,4 +1,11 @@
 #include "Component.h"
 
-template <class T>
-Component::Component<T
+template <typename T>
+Component::Component(T comp) {
+	m_data = comp;
+};
+
+template <typename T>
+T Component::GetData() {
+	return m_data;
+};

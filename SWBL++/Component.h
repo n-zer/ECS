@@ -1,15 +1,13 @@
 #pragma once
+#include "Obj.h"
 
 template <class T>
 class Component {
 public:
 	bool m_active = false;
-	Component<T>(T comp) {
-		m_data = comp;
-	};
+	Component(T comp);
 private:
+	Obj * m_owner;
 	T m_data;
-	T GetData() {
-		return m_data;
-	};
+	T GetData();
 };
