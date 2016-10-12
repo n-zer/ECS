@@ -1,11 +1,12 @@
 #pragma once
+#include "Entity.h"
 #include <vector>
-#include "Obj.h"
+
 using namespace std;
 
 class Game {
 public:
-	vector<Obj> m_Objs;
+	vector<Entity> m_Entities;
 private:
 
 };
