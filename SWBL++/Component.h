@@ -1,12 +1,18 @@
 #pragma once
-#include "Entity.h"
 
 template <typename T> class Component {
 public:
 	bool m_active = false;
-	Component(T comp);
+	Component() {}
+	Component(unsigned int entityId, T comp) {
+		m_entityId = entityId;
+		m_data = comp;
+	}
+
+	T& GetData() {
+		return m_data;
+	}
 private:
-	Entity * m_owner;
+	unsigned int m_entityId;
 	T m_data;
-	T GetData();
 };

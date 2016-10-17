@@ -1,6 +1,7 @@
 #include "Game.h"
 
 int main() {
-	Handle newHandle = Handle(0, &(vector<int>()));
+	Game g = Game();
+	g.Update();
 	return 0;
 }

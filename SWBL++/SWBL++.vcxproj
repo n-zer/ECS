@@ -118,16 +118,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="TestSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Component.h" />
+    <ClInclude Include="ComponentContainer.h" />
     <ClInclude Include="Game.h" />
-    <ClInclude Include="Handle.h" />
     <ClInclude Include="Identifiable.h" />
-    <ClInclude Include="Entity.h" />
+    <ClInclude Include="System.h" />
+    <ClInclude Include="TestComponent.h" />
+    <ClInclude Include="TestSystem.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
