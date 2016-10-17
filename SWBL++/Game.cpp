@@ -2,7 +2,7 @@
 
 Game::Game() {
 	m_idQueue = vector<int>();
-	m_entities = vector<vector<System*>>();
+	m_entities = vector<vector<ISystem*>>();
 	m_ts = new TestSystem();
 	m_ts->Create(0, { 1 });
 }
@@ -11,7 +11,7 @@ Game::~Game() {
 	delete m_ts;
 }
 
-void Game::AttachSystem(unsigned int entityId, System* system) {
+void Game::AttachSystem(unsigned int entityId, ISystem* system) {
 	m_entities[entityId].push_back(system);
 }
 
