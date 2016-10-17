@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClInclude Include="Component.h" />
     <ClInclude Include="ComponentContainer.h" />
+    <ClInclude Include="FreeVector.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Identifiable.h" />
     <ClInclude Include="System.h" />

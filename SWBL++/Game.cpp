@@ -17,4 +17,7 @@ void Game::AttachSystem(unsigned int entityId, System* system) {
 
 void Game::Update() {
 	m_ts->Update();
+	m_ts->Remove(0);
+	m_ts->Create(0, { 1 });
+	m_ts->Remove(0);
 }

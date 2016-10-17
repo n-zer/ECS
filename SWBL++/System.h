@@ -1,5 +1,4 @@
 #pragma once
-#define MAX_ENTITIES 1000
 class System {
 public:
 	void virtual Update() {};
