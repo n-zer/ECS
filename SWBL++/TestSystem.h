@@ -2,6 +2,7 @@
 #include "System.h"
 #include "TestComponent.h"
 
+//A System implementation
 class TestSystem : public System<TestComponent> {
 public:
 	void Update(Game * g);

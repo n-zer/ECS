@@ -1,5 +1,6 @@
 #pragma once
 
+//Component data struct
 struct TestComponent{
 	int value;
 };

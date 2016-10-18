@@ -1,5 +1,5 @@
 #pragma once
-class Game;
+class Game; //we need this to avoid circular dependencies
 class ISystem {
 public:
 	void virtual Update(Game * g) {};
