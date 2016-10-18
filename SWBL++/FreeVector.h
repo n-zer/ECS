@@ -11,7 +11,7 @@ public:
 		//m_vector.clear();
 		//m_freeIndices.clear();
 	}
-	int Add(T item) {
+	int add(T item) {
 		if (m_freeIndices.size() > 0)
 		{
 			int index = m_freeIndices[0];
@@ -25,7 +25,7 @@ public:
 			return m_vector.size() - 1;
 		}
 	}
-	void Free(unsigned int index) {
+	void free(unsigned int index) {
 		if (m_vector.size() > index)
 			m_freeIndices.push_back(index);
 	}

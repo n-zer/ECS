@@ -12,6 +12,9 @@ public:
 	T& GetData() {
 		return m_data;
 	}
+	unsigned int GetEntityId() {
+		return m_entityId;
+	}
 private:
 	unsigned int m_entityId;
 	T m_data;

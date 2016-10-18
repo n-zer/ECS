@@ -2,7 +2,8 @@
 
 struct TestComponent{
 	int value;
-	/*TestComponent() :value(5) {
+};
 
-	}*/
+struct TestComponent2 {
+	char value;
 };

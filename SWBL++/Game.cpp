@@ -1,23 +1,28 @@
 #include "Game.h"
 
 Game::Game() {
-	m_idQueue = vector<int>();
-	m_entities = vector<vector<ISystem*>>();
+	m_entities = FreeVector<vector<ISystem*>>();
 	m_ts = new TestSystem();
-	m_ts->Create(0, { 1 });
+	m_ts2 = new TestSystem2();
 }
 
 Game::~Game() {
 	delete m_ts;
-}
-
-void Game::AttachSystem(unsigned int entityId, ISystem* system) {
-	m_entities[entityId].push_back(system);
+	delete m_ts2;
 }
 
 void Game::Update() {
-	m_ts->Update();
-	m_ts->Remove(0);
-	m_ts->Create(0, { 1 });
-	m_ts->Remove(0);
+	m_ts->Update(this);
+	m_ts2->Update(this);
+}
+
+void Game::RemoveEntity(unsigned int entityId) {
+	if (m_entities.size() > entityId)
+	{
+		vector<ISystem*> systems = m_entities[entityId];
+		for (ISystem* s : systems) {
+			s->Remove(entityId);
+		}
+		m_entities.free(entityId);
+	}
 }

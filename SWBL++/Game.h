@@ -1,19 +1,17 @@
 #pragma once
-#include "ISystem.h"
-#include "System.h"
 #include "TestSystem.h"
 #include <vector>
 
 using namespace std;
-
 class Game {
 public:
 	TestSystem * m_ts;
-	void AttachSystem(unsigned int entityId, ISystem *system);
+	TestSystem2 * m_ts2;
 	Game();
 	~Game();
 	void Update();
+	void RemoveEntity(unsigned int entityId);
+	friend class Constructors;
 private:
-	vector<int> m_idQueue;
-	vector<vector<ISystem*>> m_entities;
+	FreeVector<vector<ISystem*>> m_entities;
 };
