@@ -19,9 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{8C75BEC8-AB51-4369-A03B-E58EFDDEC71F}</ProjectGuid>
+    <ProjectGuid>{55E5D600-14E1-43C2-A1DB-A27136FD7E7E}</ProjectGuid>
     <RootNamespace>SWBL</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>ECS</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
